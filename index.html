@@ -13,10 +13,41 @@
 		<div class="row">
 			<div class="col-sm-8 center-block">
 				<h1 class="text-center">Klasyfikacja {{skoczkowie.length}} skoczków narciarskich</h1><br>
-				<div class="input-group">
-					<span class="input-group-addon">Szukaj: </span>
-					<input type="text" class="form-control" placeholder="Czego szukasz?" ng-model="wyszukiwarka">
-				</div><br>
+				
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="input-group">
+							<span class="input-group-addon">Szukaj: </span>
+							<input type="text" class="form-control" placeholder="Czego szukasz?" ng-model="wyszukiwarka">
+						</div><br>
+					</div>
+				<div class="col-sm-6">	
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+						Dodaj skoczka
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-body">
+					    	<div class="form-group">
+					    		<label for="">Nazwisko i imię</label>
+					        	<input type="text" class="form-control" ng-model="nazwiskoSkoczka">
+					        </div>
+					      </div>
+
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Wróć</button>
+					        <button ng-click="dodajSkoczka" type="button" class="btn btn-primary">Dodaj skoczka</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
 
 				<div class="table-responsive">
 					<table class="table table-hover" >

@@ -3,7 +3,10 @@
 var app = angular.module('aplikacja' , [] );
 
 	app.controller('kontrolerTabeliSkoczkow', ['$scope', '$filter', function($scope, $filter){
-		
+		$scope.dodajSkoczka = function() {
+			$scope.skoczkowie.splice(0, 0 ,$scope.nazwiskoSkoczka);
+		}
+
 		$scope.usunSkoczka = function($index){
 			$scope.skoczkowie.splice($index , 1);
 		};

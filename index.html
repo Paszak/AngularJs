@@ -24,24 +24,24 @@
 					</div>
 				<div class="col-sm-6">	
 					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+					<button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">
 						Dodaj skoczka
 					</button>
 
 					<!-- Modal -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					  <div class="modal-dialog" role="document">
+					  <div class="modal-dialog">
 					    <div class="modal-content">
 					      <div class="modal-body">
 					    	<div class="form-group">
-					    		<label for="">Nazwisko i imię</label>
+					    		<label>Nazwisko i imię</label>
 					        	<input type="text" class="form-control" ng-model="nazwiskoSkoczka">
 					        </div>
 					      </div>
 
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">Wróć</button>
-					        <button ng-click="dodajSkoczka" type="button" class="btn btn-primary">Dodaj skoczka</button>
+					        <button ng-click="dodajSkoczka()" type="button" class="btn btn-primary">Dodaj skoczka</button>
 					      </div>
 					    </div>
 					  </div>
